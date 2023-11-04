@@ -1,0 +1,13 @@
+  A[Recepción de Llamadas] --> B[Registro de Solicitudes]
+  B --> C[Asignación a Departamento]
+  C --> D{¿Reparación Mecánica Requerida?}
+  D -- Sí --> E[Evaluación Mecánica]
+  D -- No --> F[Envío a Almacén]
+  E --> G{¿Reparación Completa?}
+  F --> G
+  G -- Sí --> H[Almacenamiento]
+  G -- No --> I[Reparación]
+  I --> J[Verificación de Reparación]
+  J --> K[Entrega al Cliente]
+  H --> K
+  K --> L[Encuesta de Satisfacción] 
